@@ -73,7 +73,7 @@ exports.default = [{
       var checked = bindArg.element.checked;
       bindArg.setVmValue(checked);
       if (!ReactDOM) {
-        ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('react-dom');
+        ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('inferno-compat');
       }
       if (checked && bindArg.element.name && ReactDOM !== IS_NATIVE) {
         var inputs = ReactDOM.findDOMNode(bindArg.component).querySelectorAll('input[type=radio][name=' + bindArg.element.name + ']');
@@ -127,7 +127,7 @@ exports.default = [{
       if (bindArg.element.checked) {
         bindArg.setVmValue(bindArg.element.value);
         if (!ReactDOM) {
-          ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('react-dom');
+          ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('inferno-compat');
         }
         if (bindArg.element.name && ReactDOM !== IS_NATIVE) {
 

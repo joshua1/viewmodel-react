@@ -1359,7 +1359,7 @@ var ViewModel = function () {
     key: 'getPathToRoot',
     value: function getPathToRoot(component) {
       if (!ReactDOM) {
-        ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('react-dom');
+        ReactDOM = navigator.project === 'ReactNative' ? IS_NATIVE : require('inferno-compat');
       }
 
       if (ReactDOM === IS_NATIVE) {
